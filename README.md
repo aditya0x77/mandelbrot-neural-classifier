@@ -1,73 +1,53 @@
-# 🌀 MandelNet — Neural Network Learns the Mandelbrot Set
+# 🌀 Mandelbrot Fractal Classifier
 
-A TensorFlow-based neural network that learns to classify whether a given complex coordinate lies **inside** the Mandelbrot set or not and visualizes its learning process epoch by epoch.
+Welcome to the **Mandelbrot Fractal Classifier**! This project uses a **deep neural network** to classify points in 2D space as part of the **Mandelbrot set** or not. The model takes 2D coordinates as input and predicts whether each point belongs to the fractal. With multiple hidden layers and **ReLU activations**, the network gradually learns the intricate fractal boundary.  
 
----
+✨ The training process is visualized **epoch by epoch**, creating images that can be combined into a **GIF** to watch the model learn the Mandelbrot fractal in real-time! 🌟
 
-## 🎥 Demo
+## 📊 Dataset
 
-Watch the model *learn* the Mandelbrot fractal over time:
+This repository does **not** include a pre-generated dataset (`dataset.csv`). Instead, a **script** is provided to generate the training data. The script samples 2D points in the complex plane 🌐 and labels them based on whether they belong to the Mandelbrot set (escape value = 1000) or not.  
 
-> *(insert your training video or GIF below)*  
-> ![Mandelbrot Learning Animation](images/demo.gif)
+This approach allows you to generate datasets of **any size** for training or experimentation, making the project fully **reproducible** and flexible. 🔄
 
----
+## 🏗️ Model Architecture & Training
 
-## 🧠 Concept
+The model is a **deep feedforward neural network** built using TensorFlow/Keras. 🧠 It consists of:
 
-The Mandelbrot set is defined by all complex numbers `c` for which the iteration:
+- An **input layer** for 2D coordinates (x, y) 🎯
+- **12 hidden layers** with 200 neurons each and **ReLU activation** 🔥
+- An **output layer** with **sigmoid activation** to classify points as Mandelbrot (1) or not (0) 🎛️
 
-\[
-z_{n+1} = z_n^2 + c
-\]
+```python
+model = Sequential([
+    Input(shape=(2,)),
+    Dense(200, activation="relu"),
+    Dense(200, activation="relu"),
+    ...
+    Dense(1, activation="sigmoid")
+])
+```
+# 🎥 Visualization & GIF
 
-does **not** diverge after a large number of steps.
+To make learning more **interactive** and **fun**, the training process generates images of the predicted Mandelbrot set at the end of each epoch. 🖼️ These images are saved in the `images/` folder. After training, you can combine them into a **GIF** to watch the model gradually learn the fractal pattern.✨  
+[Watch the Mandelbrot Training Video](path_to_your_video.mp4)
 
-This project teaches a **deep neural network** to approximate that boundary directly from data — no iterative escape-time algorithm used at inference!
+# 🚀 How to Run & Usage
 
----
-
-## 🧩 How It Works
-
-1. A dataset of 2D coordinates (`x`, `y`) is generated with escape counts.
-2. Points that never escape (e.g. `esc == 1000`) are labeled `1`, others `0`.
-3. A deep fully-connected neural network learns to classify them.
-4. After every training epoch, the model predicts across a grid of coordinates.
-5. The visualization callback saves the model’s evolving “understanding” of the fractal.
-
----
-
-## 🧱 Architecture
-
-| Layer | Type | Units | Activation |
-|-------|------|--------|-------------|
-| 1 | Input | 2 | — |
-| 2–21 | Dense | 200 | ReLU |
-| 22 | Dense | 1 | Sigmoid |
-
-> You can easily adjust the depth and width — even a 3–4 layer network can capture the structure surprisingly well.
-
----
-
-## 🖼️ Visualization Example
-
-Each image below is generated automatically during training via a custom Keras callback:
-
-| Epoch 1 | Epoch 10 | Epoch 50 | Epoch 200 |
-|----------|-----------|-----------|------------|
-| ![E1](images2/1.png) | ![E10](images2/10.png) | ![E50](images2/50.png) | ![E200](images2/200.png) |
-
----
-
-## 🧰 Requirements
-
-- Python 3.9+
-- TensorFlow
-- NumPy
-- Matplotlib
-- Pandas
-
-Install dependencies:
+1. **Clone the repository** 📂
 
 ```bash
-pip install tensorflow numpy matplotlib pandas
+git clone https://github.com/yourusername/mandelbrot-classifier.git
+cd mandelbrot-classifier
+```
+# 🧩 Dependencies & Requirements
+
+Make sure you have the following installed before running the project:
+
+- **Python 3.8+** 🐍  
+- **TensorFlow** (`tensorflow>=2.0`) ⚡  
+- **Pandas** (`pandas>=1.0`) 📊  
+- **NumPy** (`numpy>=1.18`) 🔢  
+- **Matplotlib** (`matplotlib>=3.0`) 📉  
+
+

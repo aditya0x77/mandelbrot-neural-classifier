@@ -4,6 +4,19 @@ Welcome to the **Mandelbrot Fractal Classifier**! This project uses a **deep neu
 
 ✨ The training process is visualized **epoch by epoch**, creating images that can be combined into a **GIF** to watch the model learn the Mandelbrot fractal in real-time! 🌟
 
+## 🎯 What is the Mandelbrot Set?
+
+The **Mandelbrot set** is one of the most famous fractals in mathematics. It consists of all complex numbers \( c \) for which the function \( f_c(z) = z^2 + c \) does not diverge when iterated from \( z = 0 \). 
+
+### 🔍 Real Mandelbrot Fractal
+Here's what the actual Mandelbrot set looks like:
+
+![Mandelbrot Set](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/600px-Mandel_zoom_00_mandelbrot_set.jpg)
+
+*The characteristic "cardioid" shape with self-similar patterns at all scales*
+
+The black regions represent points that **belong** to the Mandelbrot set, while the colored regions show how quickly points outside the set diverge to infinity.
+
 ## 📊 Dataset
 
 This repository does **not** include a pre-generated dataset (`dataset.csv`). Instead, a **script** is provided to generate the training data. The script samples 2D points in the complex plane 🌐 and labels them based on whether they belong to the Mandelbrot set (escape value = 1000) or not.  
@@ -15,7 +28,7 @@ This approach allows you to generate datasets of **any size** for training or ex
 The model is a **deep feedforward neural network** built using TensorFlow/Keras. 🧠 It consists of:
 
 - An **input layer** for 2D coordinates (x, y) 🎯
-- **12 hidden layers** with 200 neurons each and **ReLU activation** 🔥
+- **Multiple hidden layers** with 200 neurons each and **ReLU activation** 🔥
 - An **output layer** with **sigmoid activation** to classify points as Mandelbrot (1) or not (0) 🎛️
 
 ```python
@@ -23,7 +36,7 @@ model = Sequential([
     Input(shape=(2,)),
     Dense(200, activation="relu"),
     Dense(200, activation="relu"),
-    ...
+    # ... multiple hidden layers
     Dense(1, activation="sigmoid")
 ])
 ```

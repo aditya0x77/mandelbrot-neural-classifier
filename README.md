@@ -44,14 +44,11 @@ model = Sequential([
 
 Here’s how the model predictions evolve over training:
 
-### Epoch 1
-![Epoch 1](Images/0.png)
-
-### Epoch 50
-![Epoch 50](Images/50.png)
-
-### Epoch 200
-![Epoch 200](Images/199.png)
+<p float="left">
+  <img src="Images/0.png" width="200" />
+  <img src="Images/50.png" width="200" />
+  <img src="Images/199.png" width="200" />
+</p>
 
 # 🎥 Visualization & GIF
 
@@ -74,6 +71,14 @@ Make sure you have the following installed before running the project:
 - **TensorFlow** (`tensorflow>=2.0`) ⚡  
 - **Pandas** (`pandas>=1.0`) 📊  
 - **NumPy** (`numpy>=1.18`) 🔢  
-- **Matplotlib** (`matplotlib>=3.0`) 📉  
+- **Matplotlib** (`matplotlib>=3.0`) 📉
+- 
+## 😲End of Line
+
+And that’s how our neural network learns the Mandelbrot set! Even Chester is surprised by how fast it picks up those intricate fractal patterns.  
+
+![Surprised Chester](Images/chester.gif)
+
+> “Whoa… did it really learn that in 200 epochs?” 😆
 
 

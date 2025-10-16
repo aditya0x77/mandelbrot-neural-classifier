@@ -72,7 +72,6 @@ Make sure you have the following installed before running the project:
 - **Pandas** (`pandas>=1.0`) 📊  
 - **NumPy** (`numpy>=1.18`) 🔢  
 - **Matplotlib** (`matplotlib>=3.0`) 📉
-- 
 ## 😲End of Line
 
 And that’s how our neural network learns the Mandelbrot set! Even Chester is surprised by how fast it picks up those intricate fractal patterns.  

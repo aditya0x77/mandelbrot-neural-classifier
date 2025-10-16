@@ -67,11 +67,11 @@ cd mandelbrot-neural-classifier
 
 Make sure you have the following installed before running the project:
 
-- **Python 3.8+** 🐍  
+- **Python 3.12** 🐍  
 - **TensorFlow** (`tensorflow>=2.0`) ⚡  
-- **Pandas** (`pandas>=1.0`) 📊  
-- **NumPy** (`numpy>=1.18`) 🔢  
-- **Matplotlib** (`matplotlib>=3.0`) 📉
+- **Pandas** 📊  
+- **NumPy**  🔢  
+- **Matplotlib** 📉
 ## 😲End of Line
 
 And that’s how our neural network learns the Mandelbrot set! Even Chester is surprised by how fast it picks up those intricate fractal patterns.  

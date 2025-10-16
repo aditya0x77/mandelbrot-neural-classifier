@@ -60,8 +60,8 @@ To make learning more **interactive** and **fun**, the training process generate
 1. **Clone the repository** 📂
 
 ```bash
-git clone https://github.com/yourusername/mandelbrot-classifier.git
-cd mandelbrot-classifier
+git clone https://github.com/aditya0x77/mandelbrot-neural-classifier.git
+cd mandelbrot-neural-classifier
 ```
 # 🧩 Dependencies & Requirements
 

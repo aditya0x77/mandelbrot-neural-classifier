@@ -45,13 +45,13 @@ model = Sequential([
 Here’s how the model predictions evolve over training:
 
 ### Epoch 1
-![Epoch 1](images/1.png)
+![Epoch 1](Images/0.png)
 
 ### Epoch 50
-![Epoch 50](images/50.png)
+![Epoch 50](Images/50.png)
 
 ### Epoch 200
-![Epoch 200](images/200.png)
+![Epoch 200](Images/199.png)
 
 # 🎥 Visualization & GIF
 

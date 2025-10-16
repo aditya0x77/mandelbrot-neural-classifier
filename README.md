@@ -43,7 +43,7 @@ model = Sequential([
 # 🎥 Visualization & GIF
 
 To make learning more **interactive** and **fun**, the training process generates images of the predicted Mandelbrot set at the end of each epoch. 🖼️ These images are saved in the `images/` folder. After training, you can combine them into a **GIF** to watch the model gradually learn the fractal pattern.✨  
-[Watch the Mandelbrot Training Video](path_to_your_video.mp4)
+[Watch the Mandelbrot Training Video](Videos/mandelbrot_video.gif)
 
 # 🚀 How to Run & Usage
 

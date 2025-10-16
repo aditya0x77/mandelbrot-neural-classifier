@@ -40,6 +40,19 @@ model = Sequential([
     Dense(1, activation="sigmoid")
 ])
 ```
+# 🎥 Sample Epochs
+
+Here’s how the model predictions evolve over training:
+
+### Epoch 1
+![Epoch 1](images/1.png)
+
+### Epoch 50
+![Epoch 50](images/50.png)
+
+### Epoch 200
+![Epoch 200](images/200.png)
+
 # 🎥 Visualization & GIF
 
 To make learning more **interactive** and **fun**, the training process generates images of the predicted Mandelbrot set at the end of each epoch. 🖼️ These images are saved in the `images/` folder. After training, you can combine them into a **GIF** to watch the model gradually learn the fractal pattern.✨  
